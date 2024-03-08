@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="3.js"></script>
+    <link rel="stylesheet" type="text/css" href="3.css">
+    <title>Job Application Form</title>
+</head>
+
+<body>
+    <form id="applicationForm">
+        <h2>Job Application Form</h2>
+        <fieldset>
+            <legend>Personal Information:</legend>
+
+            <label for="firstName">First Name:</label> <br>
+            <input type="text" id="firstName" name="firstName" required><br>
+
+            <label for="lastName">Last Name:</label> <br>
+            <input type="text" id="lasttName" name="lasttName" required><br>
+
+            <!-- <h3>Contact Information</h3> -->
+            <label for="phone">Phone Number:</label> <br>
+            <input type="tel" id="phone" name="phone" placeholder="0000-0000000" required
+                pattern="0[0-9]{3}-[0-9]{7}"><br>
+
+            <label for="email">Email Address:</label> <br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label>Address</label><br>
+            <label for="street">Street:</label><br>
+            <input type="text" id="street" name="street" required><br>
+
+            <label for="city">City:</label><br>
+            <input type="text" id="city" name="city" required><br>
+
+            <label for="state">State:</label><br>
+            <input type="text" id="state" name="state" required><br>
+
+            <label for="zip">ZIP Code:</label><br>
+            <input type="text" id="zip" name="zip" required><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Resume and Cover Letter</legend>
+
+            <label for="resume">Upload Resume:</label><br>
+            <input type="file" id="resume" name="resume" required><br>
+
+            <label for="coverLetter">Cover Letter:</label><br>
+            <textarea id="coverLetter" name="coverLetter" required></textarea><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education:</legend>
+
+            <label for="educationLevel">Highest Level of Education Attained:</label><br>
+            <input type="text" id="educationLevel" name="educationLevel" required> <br>
+
+            <label for="schoolName">Name of School/University:</label><br>
+            <input type="text" id="schoolName" name="schoolName" required><br>
+
+            <label for="major">Major/Area of Study:</label><br>
+            <input type="text" id="major" name="major" required><br>
+
+            <label for="graduationYear">Graduation Year:</label><br>
+            <input type="number" id="graduationYear" name="graduationYear" required><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Employment History:</legend>
+            <div id="employmentHistory">
+                <div class="job-entry">
+                    <label>Company Name:</label><br>
+                    <input type="text" id="companyName" ><br>
+
+                    <label>Employment Dates:</label><br>
+                    <input type="text" id="employmentDates" ><br>
+
+                    <label>Job Responsibilities:</label><br>
+                    <textarea id="jobResponsibilities" rows="4" ></textarea><br>
+
+                    <button type="button" id="addJob">Add Job</button>
+                </div>
+                
+                <div id="displayEntries">
+                </div>
+            </div>
+
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills:</legend>
+            <label for="skills">Relevant Skills:</label><br>
+            <input type="text" id="skills" name="skills" required> <br>
+
+            <label for="certifications">Certifications:</label><br>
+            <input type="text" id="certifications" name="certifications"><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Availability</legend>
+            <label for="startDate">Start Date:</label><br>
+            <input type="date" id="startDate" name="startDate" required><br>
+
+            <label for="workSchedule">Preferred Work Schedule:</label><br>
+            <input type="text" id="workSchedule" name="workSchedule" required><br>
+
+            <label for="relocate">Willingness to Relocate</label>
+            <input type="checkbox" id="relocate" name="relocate"><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>References</legend>
+
+            <label for="referenceName">Reference Name:</label><br>
+            <input type="text" id="referenceName" name="referenceName" required><br>
+
+            <label for="referenceContact">Reference Contact Information:</label><br>
+            <input type="text" id="referenceContact" name="referenceContact" required><br>
+
+            <label for="referenceRelationship">Relationship to Applicant:</label><br>
+            <input type="text" id="referenceRelationship" name="referenceRelationship" required><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Questions</legend>
+
+            <label for="reason">Why do you want to work for this company?</label><br>
+            <textarea id="reason" name="reason" required></textarea><br>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Consent and Agreement</legend>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the terms and conditions</label><br>
+
+        </fieldset>
+
+        <input type="submit" value="Submit"><br>
+
+    </form>
+
+    <button id="viewApplications">View Applications as Table</button>
+    <div id="applicationsTable"></div>
+
+
+</body>
+
+</html>

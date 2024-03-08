@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="pageContainer">
+        <header class="header">
+            <!-- Upper Navbar -->
+            <div class="upper-navbar-wrapper">
+                <div class="logo">
+                    <a href="#">
+                        <img src="assets/logo.png">
+                    </a>
+                </div>
+                <div>
+                    <nav class="navbar-header">
+                        <ul class="upper">
+                            <li class="dropdown"><span class="search-button"><img src="assets/search-icon.png"><strong>SEARCH</strong></span>
+                            <!-- <ul class="dropdown-contents">
+                                <li class="dropdown-item">1</li>
+                                <li class="dropdown-item">2</li>
+                                <li class="dropdown-item">3</li>
+                            </ul> -->
+                            </li>
+                            <li><span><a href="#">HOW IT WORKS</a></span></li>
+                            <li><span><a href="#">LOG IN</a></span></li>
+                            <li><span><a href="#">SIGN UP</a></span></li>
+                            <li><span ><a href="#" style="color: orange">FREE LANCER?</a></span></li>
+                        </ul>
+                        <button id="toggleButton">&#9776;</button>
+                        <button id="closeButton">X</button>
+                    </nav>
+                </div>
+            </div>
+            <!-- Lower Navbar -->
+            <div class="lower-navbar-wrapper">
+                <nav class="navbar-header">
+                    <ul class="lower">
+                        <li>Technology and Programming</li>
+                        <li>Writing and Translation</li>
+                        <li>Design</li>
+                        <li>Digital Marketing</li>
+                        <li>Video</li>
+                        <li>Photo and Image</li>
+                        <li>Business</li>
+                        <li>Music and Audio</li>
+                        <li>Branding and Sales</li>
+                        <li>Social Media</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="outer-box">
+            <div class="box">
+                <div class="line">
+                    <h1>Make bright ideas happen</h1>
+                    <h3>Access global talent on the freelancer website trusted by over 1 million businesses worldwide.</h3>
+                    <div class="search-field">
+                        <input placeholder="Try &#xFF02web development&#xFF02">
+                        <button><img src="assets/search-icon.png"></button>
+                    </div>
+                </div>
+                <div class="pictorial-info">
+                    <img src="https://dw3i9sxi97owk.cloudfront.net/homepageRevampA3/HeroImage/instance-3/hero-instance-3--desktop.png" alt="Web development">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sideMenu">
+        <ul>
+            <li><span class="search-button" style="border: none;"><img src="assets/search-icon.png"><strong>SEARCH</strong></span>
+            <!-- <ul class="dropdown-contents">
+                <li class="dropdown-item">1</li>
+                <li class="dropdown-item">2</li>
+                <li class="dropdown-item">3</li>
+            </ul> -->
+            </li>
+            <li><span><a href="#">HOW IT WORKS</a></span></li>
+            <li><span><a href="#">LOG IN</a></span></li>
+            <li><span><a href="#">SIGN UP</a></span></li>
+            <li><span><a href="#" style="color: orange">FREE LANCER?</a></span></li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function() {
+    this.style.display = 'none';
+    document.getElementById('sideMenu').style.display = 'block';
+    document.getElementById('closeButton').style.display = 'block';  
+    document.getElementById('pageContainer').style.left = '-200px';
+    
+});
+  
+document.getElementById('closeButton').addEventListener('click', function() {
+    this.style.display = 'none';
+    document.getElementById('sideMenu').style.display = 'none';
+    document.getElementById('toggleButton').style.display = 'block';  
+    document.getElementById('pageContainer').style.left = '0px';
+    
+});
+    </script>
+</body>
+
+</html>
